@@ -32,13 +32,11 @@ const calculateTotalVotes = (result) => {
 
 const percentCandidatoA = (percent) => {
   percent = ((votosCandidatoA.value * 100) / calculateTotalVotes()).toFixed(2);
-  console.log(percent);
   return percent;
 };
 
 const percentCandidatoB = (percent) => {
   percent = ((votosCandidatoB.value * 100) / calculateTotalVotes()).toFixed(2);
-  console.log(percent);
   return percent;
 };
 
@@ -46,7 +44,6 @@ const percentInvalidVotes = (percent) => {
   percent = ((calculateInvalidVotes() * 100) / calculateTotalVotes()).toFixed(
     2
   );
-  console.log(percent);
   return percent;
 };
 
@@ -78,7 +75,6 @@ const handleSubmit = (event) => {
   percentInvalidVotes();
   graphicInfo();
   form.reset();
-  console.log('Success!');
 };
 
 form.addEventListener('submit', handleSubmit);
