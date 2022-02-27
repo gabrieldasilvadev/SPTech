@@ -1,7 +1,8 @@
 import * as elements from './elements.js';
 
 const calculateInvalidVotes = (result) => {
-  result = Number(elements.votosBrancos.value) + Number(elements.votosNulos.value);
+  result =
+    Number(elements.votosBrancos.value) + Number(elements.votosNulos.value);
   return result;
 };
 
@@ -14,19 +15,28 @@ const calculateTotalVotes = (result) => {
 };
 
 const percentCandidatoA = (percent) => {
-  percent = ((elements.votosCandidatoA.value * 100) / calculateTotalVotes()).toFixed(2);
+  percent = (
+    (elements.votosCandidatoA.value * 100) /
+    calculateTotalVotes()
+  ).toFixed(2);
   return percent;
 };
 
 const percentCandidatoB = (percent) => {
-  percent = ((elements.votosCandidatoB.value * 100) / calculateTotalVotes()).toFixed(2);
+  percent = (
+    (elements.votosCandidatoB.value * 100) /
+    calculateTotalVotes()
+  ).toFixed(2);
   return percent;
 };
 
 const percentInvalidVotes = (percent) => {
-  percent = ((calculateInvalidVotes() * 100) / calculateTotalVotes()).toFixed(2);
+  percent = ((calculateInvalidVotes() * 100) / calculateTotalVotes()).toFixed(
+    2
+  );
   return percent;
 };
+
 
 const graphicInfo = () => {
   elements.infoCandidatoA.innerHTML = `Candidato A: ${percentCandidatoA()}% (${

@@ -49,12 +49,11 @@ main .wrapper .container {
   justify-content: center;
   margin: 20px 0;
   gap: 20px;
-  width: 100%;
 }
 
 .grafico .grafico-content .barra {
   height: 30px;
-  margin:5px 0;
+  margin: 5px 0;
 }
 
 .grafico .grafico-content .barra-candidatoA {
