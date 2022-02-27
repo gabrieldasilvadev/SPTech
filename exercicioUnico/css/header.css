@@ -1,0 +1,36 @@
+header {
+  box-shadow: 2px 2px rgba(0, 0, 0, 1);
+}
+
+header .wrapper .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .wrapper .header-container .logo {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+header .wrapper .header-container .logo:hover {
+  color: var(--hover-purple);
+  transition: all 0.2s 0s ease;
+  cursor: pointer;
+}
+
+.header-container .header-nav {
+  display: flex;
+  column-gap: 1.5em;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.header-container .header-nav a {
+  display: block;
+  padding: 15px;
+}
+
+.header-container .header-nav a:hover {
+  background-color: var(--hover-purple);
+  transition: all 0.5s 0s ease;
+}
