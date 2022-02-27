@@ -16,7 +16,7 @@ const calculateTotalVotes = (result) => {
 
 const percentCandidatoA = (percent) => {
   percent = (
-    (elements.votosCandidatoA.value * 100) /
+    (Number(elements.votosCandidatoA.value) * 100) /
     calculateTotalVotes()
   ).toFixed(2);
   return percent;
@@ -24,7 +24,7 @@ const percentCandidatoA = (percent) => {
 
 const percentCandidatoB = (percent) => {
   percent = (
-    (elements.votosCandidatoB.value * 100) /
+    (Number(elements.votosCandidatoB.value) * 100) /
     calculateTotalVotes()
   ).toFixed(2);
   return percent;
@@ -36,17 +36,15 @@ const percentInvalidVotes = (percent) => {
   );
   return percent;
 };
-
-
 const graphicInfo = () => {
-  elements.infoCandidatoA.innerHTML = `Candidato A: ${percentCandidatoA()}% (${
+  elements.infoCandidatoA.innerHTML = `Candidato A: ${percentCandidatoA()}% (${Number(
     elements.votosCandidatoA.value
-  } votos)`;
+  )} votos)`;
   elements.barraCandidatoA.style.width = `${percentCandidatoA()}%`;
 
-  elements.infoCandidatoB.innerHTML = `Candidato B: ${percentCandidatoB()}% (${
+  elements.infoCandidatoB.innerHTML = `Candidato B: ${percentCandidatoB()}% (${Number(
     elements.votosCandidatoB.value
-  } votos)`;
+  )} votos)`;
   elements.barraCandidatoB.style.width = `${percentCandidatoB()}%`;
 
   elements.infoVotosInvalidos.innerHTML = `Inválidos: ${percentInvalidVotes()}% (${calculateInvalidVotes()} votos)`;
@@ -60,7 +58,6 @@ const handleSubmit = (event) => {
   elements.valueVotosB.innerHTML = ` ${elements.votosCandidatoB.value}`;
   elements.valueVotosInvalidos.innerHTML = ` ${calculateInvalidVotes()}`;
   elements.totalVotos.innerHTML = ` ${calculateTotalVotes()}`;
-
   percentCandidatoA();
   percentCandidatoB();
   percentInvalidVotes();
