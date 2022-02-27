@@ -7,7 +7,6 @@ const valueVotosA = document.querySelector('.valueVotosA');
 const valueVotosB = document.querySelector('.valueVotosB');
 const valueVotosInvalidos = document.querySelector('.valueVotosInvalidos');
 const form = document.querySelector('.form');
-const btn = document.querySelector('.btn');
 const barraCandidatoA = document.querySelector('.barra-candidatoA');
 const barraCandidatoB = document.querySelector('.barra-candidatoB');
 const barraVotosInvalidos = document.querySelector('.barra-invalidos');
@@ -16,7 +15,6 @@ const infoCandidatoB = document.querySelector('.info-candidatoB');
 const infoVotosInvalidos = document.querySelector('.info-votos-invalidos');
 
 export {
-  btn,
   form,
   valueVotosInvalidos,
   valueVotosB,

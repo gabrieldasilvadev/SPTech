@@ -1,5 +1,4 @@
 import {
-  btn,
   form,
   totalVotos,
   valueVotosA,
