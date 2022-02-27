@@ -11,6 +11,9 @@ const btn = document.querySelector('.btn');
 const barraCandidatoA = document.querySelector('.barra-candidatoA');
 const barraCandidatoB = document.querySelector('.barra-candidatoB');
 const barraVotosInvalidos = document.querySelector('.barra-invalidos');
+const infoCandidatoA = document.querySelector('.info-candidatoA');
+const infoCandidatoB = document.querySelector('.info-candidatoB');
+const infoVotosInvalidos = document.querySelector('.info-votos-invalidos');
 
 export {
   btn,
@@ -26,4 +29,7 @@ export {
   barraCandidatoA,
   barraCandidatoB,
   barraVotosInvalidos,
+  infoCandidatoA,
+  infoCandidatoB,
+  infoVotosInvalidos
 };

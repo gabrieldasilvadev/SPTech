@@ -12,6 +12,9 @@ import {
   barraCandidatoA,
   barraCandidatoB,
   barraVotosInvalidos,
+  infoCandidatoA,
+  infoCandidatoB,
+  infoVotosInvalidos,
 } from './elements.js';
 
 const calculateInvalidVotes = (result) => {
@@ -47,6 +50,21 @@ const percentInvalidVotes = (percent) => {
   return percent;
 };
 
+const graphicInfo = () => {
+  infoCandidatoA.innerHTML = `Candidato A: ${percentCandidatoA()}% (${
+    votosCandidatoA.value
+  } votos)`;
+  barraCandidatoA.style.width = `${percentCandidatoA()}%`;
+
+  infoCandidatoB.innerHTML = `Candidato B: ${percentCandidatoB()}% (${
+    votosCandidatoB.value
+  } votos)`;
+  barraCandidatoB.style.width = `${percentCandidatoB()}%`;
+
+  infoVotosInvalidos.innerHTML = `Inválidos: ${percentInvalidVotes()}% (${calculateInvalidVotes()} votos)`;
+  barraVotosInvalidos.style.width = `${percentInvalidVotes()}%`;
+};
+
 const handleSubmit = (event) => {
   event.preventDefault();
 
@@ -58,6 +76,7 @@ const handleSubmit = (event) => {
   percentCandidatoA();
   percentCandidatoB();
   percentInvalidVotes();
+  graphicInfo();
   form.reset();
   console.log('Success!');
 };

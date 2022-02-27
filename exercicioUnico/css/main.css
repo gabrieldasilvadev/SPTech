@@ -58,15 +58,15 @@ main .wrapper .container {
 }
 
 .grafico .grafico-content .barra-candidatoA {
-  width: 40%;
+  width: 0;
   background-color: #43A047;
 }
 .grafico .grafico-content .barra-candidatoB {
-  width: 45%;
+  width: 0;
   background-color: #E53935;
 }
 
 .grafico .grafico-content .barra-invalidos {
-  width: 10%;
+  width: 0;
   background-color: #757575;
 }
