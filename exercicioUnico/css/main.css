@@ -59,14 +59,14 @@ main .wrapper .container {
 
 .grafico .grafico-content .barra-candidatoA {
   width: 0;
-  background-color: #43A047;
+  background-color: var(--bg-bar-green);
 }
 .grafico .grafico-content .barra-candidatoB {
   width: 0;
-  background-color: #E53935;
+  background-color: var(--bg-bar-red);
 }
 
 .grafico .grafico-content .barra-invalidos {
   width: 0;
-  background-color: #757575;
+  background-color: var(--bg-bar-gray);
 }
