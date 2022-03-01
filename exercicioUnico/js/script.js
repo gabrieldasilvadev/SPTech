@@ -37,7 +37,7 @@ const handleSubmit = (event) => {
     const barraCandidatoB = elements.barraCandidatoB;
     const barraVotosInvalidos = elements.barraVotosInvalidos;
 
-    barraCandidatoA.style.reset = '0px';
+    barraCandidatoA.style.width = '0px';
     barraCandidatoB.style.width = '0px';
     barraVotosInvalidos.style.width = '0px';
     elements.infoCandidatoA.innerHTML = `Candidato A: ${percentCandidatoA()}% (${votosCandidatoA} votos)`;
