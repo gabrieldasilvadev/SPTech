@@ -8,11 +8,11 @@
   --bg-dark: #0a0a0a;
   --bg-input: #e7e7e7;
   --bg-container-form: #0a0a0b;
-  --bg-bar-green: #43A047;
-  --bg-bar-red: #E53935;
+  --bg-bar-green: #43a047;
+  --bg-bar-red: #e53935;
   --bg-bar-gray: #757575;
 
-  --text-light: #FBFBFE;
+  --text-light: #fbfbfe;
   --text-dark: #000;
   --text-purple: #aa00ff;
 
@@ -58,13 +58,14 @@ body {
 
 input {
   display: block;
-  outline: none;
-  border: 2px solid;
+  outline: 0;
+  border: 3px solid;
   padding: 5px;
 }
 
 input:focus {
-  border: 2px solid var(--hover-purple);
+  border: 3px solid var(--hover-purple);
+  transition: border 0.35s ease 0s;
 }
 
 body,
