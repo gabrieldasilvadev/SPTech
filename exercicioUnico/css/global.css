@@ -12,8 +12,8 @@
   --bg-bar-red: #E53935;
   --bg-bar-gray: #757575;
 
-  --text-light: #000;
-  --text-dark: #fff;
+  --text-light: #FBFBFE;
+  --text-dark: #000;
   --text-purple: #aa00ff;
 
   --btn-bg-color: #7b1fa2;
@@ -37,7 +37,7 @@ html {
 body {
   scroll-behavior: smooth;
   background: var(--bg-dark);
-  color: var(--text-dark);
+  color: var(--text-light);
   scroll-behavior: smooth;
 }
 
@@ -107,7 +107,7 @@ img {
 
 .btn {
   background-color: var(--btn-bg-color);
-  color: var(--text-dark);
+  color: var(--text-light);
   padding: 15px;
   font-size: 1.8rem;
 }
