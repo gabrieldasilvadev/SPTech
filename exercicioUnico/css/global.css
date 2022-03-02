@@ -59,12 +59,12 @@ body {
 input {
   display: block;
   outline: 0;
-  border: 3px solid;
+  border: 2px solid;
   padding: 5px;
 }
 
 input:focus {
-  border: 3px solid var(--hover-purple);
+  border: 2px solid var(--hover-purple);
   transition: border 0.35s ease 0s;
 }
 
