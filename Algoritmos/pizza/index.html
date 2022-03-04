@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPTech</title>
+  </head>
+  <body>
+    <div>
+      <h2>Pizza</h2>
+      <div>
+        <span>Informe o sabor da pizza: </span
+        ><input type="text" id="sabor_pizza" />
+      </div>
+      <div>
+        <span>Informe o preço da pizza: </span>
+        <input type="text" id="valor_pizza" />
+      </div>
+      <div>
+        <span>Informe a quantidade de amigos vão comer: </span
+        ><input type="text" id="qtd_amigos" />
+      </div>
+      <button onclick="calcularValor()">Ver valor por amigo</button>
+
+      <div id="resultado"></div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function calcularValor() {
+    var saborPizza = sabor_pizza.value;
+    var valorPizza = Number(valor_pizza.value);
+    var qtdAmigos = Number(qtd_amigos.value);
+    var taxaEntregador = 10 / 100;
+    var descontoValor = valorPizza * taxaEntregador;
+    var valorTotalPizza= valorPizza + descontoValor;  
+    var valorColaborar = valorTotalPizza / qtdAmigos;
+    
+    resultado.innerHTML = `<span>Cada amigo vai colaborar com R$${valorColaborar} para a pizza de ${saborPizza}</span>`;
+  }
+</script>

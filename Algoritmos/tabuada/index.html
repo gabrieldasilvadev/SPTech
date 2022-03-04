@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPTech</title>
+  </head>
+  <body>
+    <div>
+      <h2>Tabuada</h2>
+      <input type="text" id="valor" />
+      <button onclick="calcularTabuada()">Ver Tabuada</button>
+
+      <div id="resultados"></div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function calcularTabuada() {
+    var valorValue = Number(valor.value);
+    var x1 = valorValue * 1;
+    var x2 = valorValue * 2;
+    var x3 = valorValue * 3;
+    var x4 = valorValue * 4;
+    var x5 = valorValue * 5;
+    var x6 = valorValue * 6;
+    var x7 = valorValue * 7;
+    var x8 = valorValue * 8;
+    var x9 = valorValue * 9;
+
+    resultados.innerHTML = '';
+    resultados.innerHTML += `<p>${valorValue} x 1 = ${x1}</p>`;
+    resultados.innerHTML += `<p>${valorValue} x 2 = ${x2}</p>`;
+    resultados.innerHTML += `<p>${valorValue} x 3 = ${x3}</p>`;
+    resultados.innerHTML += `<p>${valorValue} x 4 = ${x4}</p>`;
+    resultados.innerHTML += `<p>${valorValue} x 5 = ${x5}</p>`;
+    resultados.innerHTML += `<p>${valorValue} x 6 = ${x6}</p>`;
+    resultados.innerHTML += `<p>${valorValue} x 7 = ${x7}</p>`;
+    resultados.innerHTML += `<p>${valorValue} x 8 = ${x8}</p>`;
+    resultados.innerHTML += `<p>${valorValue} x 9 = ${x9}</p>`;
+  }
+</script>

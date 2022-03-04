@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPTech</title>
+  </head>
+  <body>
+    <button class="btn-carnes">Carnes</button>
+    <button class="btn-legumes">Legumes</button>
+    <button class="btn-frutas">Frutas</button>
+  </body>
+</html>
+
+<script>
+  const btnCarnes = document.querySelector('.btn-carnes');
+  const btnLegumes = document.querySelector('.btn-legumes');
+  const btnFrutas = document.querySelector('.btn-frutas');
+
+  btnCarnes.addEventListener('click', () => {
+    alert('Carne melhor coisa');
+    document.title = 'Último clique: Botão de Carnes';
+  });
+
+  btnLegumes.addEventListener('click', () => {
+    alert('Legumes tem uns que até que vai');
+    document.title = 'Último clique: Botão de Legumes';
+  });
+  
+  btnFrutas.addEventListener('click', () => {
+    alert('Frutas são mais do que frutas');
+    document.title = 'Último clique: Botão de Frutas';
+  });
+</script>

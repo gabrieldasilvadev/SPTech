@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPTech</title>
+  </head>
+
+  <body>
+    <button class="btn-pare">Pare</button>
+    <button class="btn-pense">Pense</button>
+    <button class="btn-siga">Siga</button>
+  </body>
+</html>
+
+<script>
+  const btnPare = document.querySelector('.btn-pare');
+  const btnPense = document.querySelector('.btn-pense');
+  const btnSiga = document.querySelector('.btn-siga');
+
+  btnPare.addEventListener('click', () => alert('Pare e aguarde'));
+  btnPense.addEventListener('click', () => alert('Pense para tomar a melhor decisão'));
+  btnSiga.addEventListener('click', () => alert('Siga em frente!'));
+</script>

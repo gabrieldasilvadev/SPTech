@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPTech</title>
+  </head>
+  <body style="padding: 20px">
+    <div>
+      <h2>Poder Sayajins</h2>
+
+      <div>
+        <div><span>Ki base: </span><input type="text" id="ki_base" /></div>
+
+        <p><b>Transformar em...</b></p>
+
+        <div>
+          <button onclick="transformaSsj()" id="ssj">SSJ</button>
+          <button onclick="transformaSsj2()" id="ssj_2">SSJ2</button>
+          <button onclick="transformaSsj3()" id="ssj_3">SSJ3</button>
+        </div>
+        <div id="resultado"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function transformaSsj() {
+    var kiBase = Number(ki_base.value);
+    var kiSsj = kiBase * 50;
+
+    ki_base.value = '';
+    resultado.innerHTML = '';
+    resultado.innerHTML += `<p>Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${kiSsj}</p>`;
+
+    resultado.innerHTML += `
+    <b>SSJ:</b>
+    <br/>
+    <img src="./img/ssj.png" alt="SSJ"/>
+    `;
+  }
+
+  function transformaSsj2() {
+    var kiBase = Number(ki_base.value);
+    var kiSsj2 = kiBase * 100;
+
+    ki_base.value = '';
+    resultado.innerHTML = '';
+    resultado.innerHTML += `<p>Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${kiSsj2}</p>`;
+
+    resultado.innerHTML += `
+    <b>SSJ2:</b>
+    <br/>
+    <img src="./img/ssj2.png" alt="SSJ2"/>
+    `;
+  }
+
+  function transformaSsj3() {
+    var kiBase = Number(ki_base.value);
+    var kiSsj3 = kiBase * 200;
+
+    ki_base.value = '';
+    resultado.innerHTML = '';
+    resultado.innerHTML += `<p>Após se transformar em SSJ3, o ki desse Sayajin passa a ser de ${kiSsj3}</p>`;
+
+    resultado.innerHTML += `
+    <b>SSJ3:</b>
+    <br/>
+    <img src="./img/ssj3.png" alt="SSJ3"/>
+    `;
+  }
+</script>

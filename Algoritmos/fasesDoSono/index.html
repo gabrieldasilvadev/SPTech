@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fases do sono</title>
+  </head>
+  <body>
+    <div>
+      <h2>Fases do sono</h2>
+      <div>
+        <span>Horas dormidas</span><input type="text" id="horasDormidas" />
+      </div>
+      <button onclick="calcularSono()">Calcular Sono</button>
+      <div>
+        <p id="fase1"></p>
+        <p id="fase2"></p>
+        <p id="fase3"></p>
+        <p id="faseRem"></p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function calcularSono() {
+    var valueHoras = Number(horasDormidas.value);
+    valuefase1 = 5;
+    valuefase2 = 45;
+    valuefase3 = 30;
+    valuefaseRem = 20;
+    console.log(fase1);
+
+    horasFase1 = (valueHoras * valuefase1) / 100;
+    horasFase2 = (valueHoras * valuefase2) / 100;
+    horasFase3 = (valueHoras * valuefase3) / 100;
+    horasFaseRem = (valueHoras * valuefaseRem) / 100;
+
+    fase1.innerHTML = `<u>${horasFase1}</u> horas na <b>fase 1</b>`;
+    fase2.innerHTML = `<u>${horasFase2}</u> horas na <b>fase 2</b>`;
+    fase3.innerHTML = `<u>${horasFase3}</u> horas na <b>fase 3</b>`;
+    faseRem.innerHTML = `<u>${horasFaseRem}</u> horas na <b>fase rem</b>`;
+  }
+</script>

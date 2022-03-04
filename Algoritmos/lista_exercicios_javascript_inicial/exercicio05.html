@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPTech</title>
+  </head>
+  <body>
+    <center>
+      <h2>Brasil x Alemanha</h2>
+
+      <button onclick="golBrasil ()">Gol do Brasil</button>
+      <button onclick="golAlemanha ()">Gol da Alemanha</button>
+      <br />
+      <b>Tempo real do jogo:</b>
+      <div id="brasil"></div>
+      <div id="alemanha"></div>
+    </center>
+  </body>
+</html>
+
+<script>
+  function golBrasil() {
+    brasil.innerHTML +=
+      "<p style='color: green; background-color: yellow;'>É gooolllll do Brasil!!!</p>";
+  }
+
+  function golAlemanha() {
+    alemanha.innerHTML +=
+      "<p style='color: yellow; background-color: #8b0000;'>É gooolllll da Alemanha!!!</p>";
+  }
+</script>

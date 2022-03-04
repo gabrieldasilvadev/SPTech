@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPTech</title>
+  </head>
+  <body>
+    <button class="btn-carnes">Carnes</button>
+    <button class="btn-legumes">Legumes</button>
+    <button class="btn-frutas">Frutas</button>
+
+    <div id="resultado"></div>
+  </body>
+</html>
+
+<div style="background-color: red; color: white;"></div>
+
+<script>
+  const btnCarnes = document.querySelector('.btn-carnes');
+  const btnLegumes = document.querySelector('.btn-legumes');
+  const btnFrutas = document.querySelector('.btn-frutas');
+
+  btnCarnes.addEventListener('click', () => {
+    resultado.innerHTML = `<div style="background-color: red; color: white;">Carne melhor coisa</div>`
+    document.title = 'Último clique: Botão de Carnes';
+  });
+
+  btnLegumes.addEventListener('click', () => {
+    resultado.innerHTML = `<div style="background-color: black; color: yellow;">Legumes tem uns que até que vai</div>`
+    document.title = 'Último clique: Botão de Legumes';
+  });
+  
+  btnFrutas.addEventListener('click', () => {
+    resultado.innerHTML = `<div style="background-color: white; color: green;">Frutas são mais do que frutas</div>`
+    document.title = 'Último clique: Botão de Frutas';
+  });
+</script>

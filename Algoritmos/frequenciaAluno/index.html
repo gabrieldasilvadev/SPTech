@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPTech</title>
+  </head>
+  <body>
+    <div>
+      <h2>Frequência do aluno</h2>
+
+      <div>
+        <div>
+          <span>Nome do aluno: </span
+          ><input type="text" placeholder="Nome do aluno" id="nome_aluno" />
+        </div>
+        <div>
+          <span>Quantidade total de aulas: </span
+          ><input
+            type="text"
+            placeholder="Quantidade total de Aulas"
+            id="qtd_total_aulas"
+          />
+        </div>
+        <div>
+          <span>Quantidade de faltas: </span
+          ><input
+            type="text"
+            placeholder="Quantidade de faltas"
+            id="qtd_faltas"
+          />
+        </div>
+
+        <button onclick="calcularFrequencia()">Calcular Frequência</button>
+
+        <div id="resultado"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function calcularFrequencia() {
+    var nomeAluno = nome_aluno.value;
+    var totalAulas = Number(qtd_total_aulas.value);
+    var faltas = Number(qtd_faltas.value);
+    var frequenciaFaltas = (faltas * 100) / totalAulas;
+    var frequenciaAulas = (100 - frequenciaFaltas).toFixed(2);
+
+    nome_aluno.value = '';
+    qtd_total_aulas.value = '';
+    qtd_faltas.value = '';
+
+    resultado.innerHTML = `<p>Olá, ${nomeAluno} Sua frequência foi de <b id="freq_aulas">${frequenciaAulas}%</b><p>`;
+    
+    resultado.style.color += 'blue';
+    freq_aulas.style.color += 'green';
+
+    resultado.innerHTML += `<div id="barra"></div>`;
+    barra.style.height += '20px';
+    barra.style.width += `${frequenciaAulas}%`;
+    barra.style.backgroundColor += '#8B0000';
+    barra.style.marginTop += '20px';
+    barra.style.height += '0px';
+
+    resultado.innerHTML += '';
+  }
+</script>

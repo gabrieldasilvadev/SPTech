@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPTech</title>
+  </head>
+  <body>
+    <div>
+      <span>Informe o valor da passagem: </span
+      ><input type="text" id="valor_passagem" />
+    </div>
+
+    <div>
+      <span>Informe a quantidade de viagens(mes)</span
+      ><input type="text" id="qtd_passagem_mes" />
+    </div>
+
+    <div>
+      <span>Informe a distancia ate sua casa(km)</span
+      ><input type="text" id="distancia_casa" />
+    </div>
+
+    <button onclick="calcularVT()">Calcular VT</button>
+    <div id="resultado"></div>
+  </body>
+</html>
+
+<script>
+  function calcularVT() {
+    var valorPassagem = Number(valor_passagem.value);
+    var distanciaCasa = Number(distancia_casa.value);
+    var qtdPassagemMesTotal = Number(qtd_passagem_mes.value);
+
+    var qtdPassagemAppMes = qtdPassagemMesTotal * 0.1;
+    var qtdPassagemPublicoMes = qtdPassagemMesTotal * 0.9;
+
+    var valorTransporteApp = 0.75;
+    var valorViajemApps = (qtdPassagemAppMes *distanciaCasa) * valorTransporteApp;
+    var valorViajemPublico = qtdPassagemPublicoMes * valorPassagem;
+    var valorTotalPassagemMes = valorViajemApps + valorViajemPublico;
+
+    resultado.innerHTML = `Você vai gastar R$${valorTotalPassagemMes.toFixed(
+      2
+    )} por mês com transporte.`;
+  }
+</script>
