@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button onclick="moverEsquerda()">Mover p/ Esquerda</button>
+      <input type="text" id="entrada_pixel_esquerda" /><span id="valor_pixel_esquerda">0</span>
+      <button onclick="moverDireita()">Mover p/ Direita</button>
+      <input type="text" id="entrada_pixel_direita" /><span  id="valor_pixel_direita" >0</span>
+    </div>
+
+    <img
+      src="https://www.pinclipart.com/picdir/big/141-1411954_bart-simpson-clipart-transparent-background-bart-simpson-skate.png"
+      style="margin-top: 20px; width: 400px"
+      id="img"
+    />
+  </body>
+</html>
+
+<script>
+  function moverDireita() {
+    var entradaPixelDireita = Number(entrada_pixel_direita.value);
+    var valorPixelDireita = Number(valor_pixel_direita.innerHTML);
+    valorPixelDireita = valorPixelDireita + entradaPixelDireita;
+    valor_pixel_direita.innerHTML = valorPixelDireita;
+    img.style.marginLeft = `${valorPixelDireita}px`
+  }
+  function moverEsquerda() {
+    var entradaPixelEsquerda = Number(entrada_pixel_esquerda.value);
+    var valorPixelEsquerda = Number(valor_pixel_esquerda.innerHTML);
+    valorPixelEsquerda = valorPixelEsquerda + entradaPixelEsquerda;
+    valor_pixel_esquerda.innerHTML = valorPixelEsquerda;
+    img.style.marginLeft = `-${valorPixelEsquerda}px`
+  }
+</script>
