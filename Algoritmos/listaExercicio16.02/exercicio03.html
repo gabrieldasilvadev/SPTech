@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="color: blue">
+      <span>Total Total guardado no cofrinho: <u id="cofrinho">0</u></span>
+      <p>Depósitos efetuados: <u id="contador">0</u></p>
+    </div>
+
+    <div>
+      <button onclick="depositar05()">Depositar 0,50</button>
+      <button onclick="depositar2()">Depositar 2,00</button>
+    </div>
+  </body>
+</html>
+
+<script>
+  function depositar05() {
+    var valorCofrinho = Number(cofrinho.innerHTML);
+    valorCofrinho = valorCofrinho + 0.5;
+    cofrinho.innerHTML = valorCofrinho;
+
+    var count = Number(contador.innerHTML);
+    count = count + 1;
+    contador.innerHTML = count;
+  }
+
+  function depositar2() {
+    var valorCofrinho = Number(cofrinho.innerHTML);
+    valorCofrinho = valorCofrinho + 2;
+    cofrinho.innerHTML = valorCofrinho;
+
+    var count = Number(contador.innerHTML);
+    count = count + 1;
+    contador.innerHTML = count;
+  }
+</script>
