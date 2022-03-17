@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <img
+        src="http://disneyplusbrasil.com.br/wp-content/uploads/2021/08/Miles-Morales.jpg"
+        width="400px"
+        id="img"
+      />
+
+      <div id="largura_atual" style="color: white">400</div>
+    </div>
+
+    <div>
+      <button onclick="aumentarLargura()">Aumentar a largura</button>
+      <button onclick="adiminuirLargura()">Reduzir a largura</button>
+    </div>
+  </body>
+</html>
+
+<script>
+  function aumentarLargura() {
+    var larguraAtual = Number(largura_atual.innerHTML);
+    larguraAtual = larguraAtual + 10;
+    img.style.width = `${larguraAtual}px`;
+    largura_atual.innerHTML = larguraAtual;
+  }
+  function adiminuirLargura() {
+    var larguraAtual = Number(largura_atual.innerHTML);
+    larguraAtual = larguraAtual - 10;
+    img.style.width = `${larguraAtual}px`;
+    largura_atual.innerHTML = larguraAtual;
+  }
+</script>
