@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <span>Qual o salário do usuário</span>
+      <input type="text" id="salario_usuario" />
+
+      <p id="resultado"></p>
+    </div>
+
+    <div style="margin-top: 20px">
+      <button onclick="confirmarSalario()">Confirmar salário</button>
+      <button onclick="pagarConta100()">Pagar conta de 100</button>
+      <button onclick="pagarConta500()">Pagar conta de 500</button>
+      <button onclick="ganharLoteria()">Ganhar 2000 na loteria</button>
+    </div>
+    <span id="salario_atual" style="color: white"></span>
+  </body>
 </html>
+
+<script>
+  function confirmarSalario() {
+    var salarioUsuario = Number(salario_usuario.value);
+
+    resultado.innerHTML = `Grana atual: R$${salarioUsuario}`;
+  }
+
+  function pagarConta100() {
+    var salarioUsuario = Number(salario_usuario.value);
+    var salarioAtual = Number(salario_atual.innerHTML);
+    salarioAtual = salarioAtual - 100;
+    salario_atual.innerHTML = salarioAtual;
+
+    salarioAtual = salarioUsuario + Number(salario_atual.innerHTML);
+
+    resultado.innerHTML = `Grana atual: R$${salarioAtual}`;
+  }
+  function pagarConta500() {
+    var salarioUsuario = Number(salario_usuario.value);
+    var salarioAtual = Number(salario_atual.innerHTML);
+    salarioAtual = salarioAtual - 500;
+    salario_atual.innerHTML = salarioAtual;
+
+    salarioAtual = salarioUsuario + Number(salario_atual.innerHTML);
+
+    resultado.innerHTML = `Grana atual: R$${salarioAtual}`;
+  }
+
+  function ganharLoteria() {
+    var salarioUsuario = Number(salario_usuario.value);
+    var salarioAtual = Number(salario_atual.innerHTML);
+    salarioAtual = salarioAtual + 2000;
+    salario_atual.innerHTML = salarioAtual;
+
+    salarioAtual = salarioUsuario + Number(salario_atual.innerHTML);
+
+    resultado.innerHTML = `Grana atual: R$${salarioAtual}`;
+  }
+</script>
