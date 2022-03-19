@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Progressão</h3>
+
+    <div>
+      <div>
+        Informe o primeiro número da progressão:
+        <input type="text" id="input_primeiro_termo" />
+      </div>
+      <div>Informe a razão: <input type="text" id="input_razao" /></div>
+      <div>Informe o termo: <input type="text" id="input_termo" /></div>
+      <button onclick="calcularPG()">Calcular PG</button>
+    </div>
+    <div id="resultado"></div>
+  </body>
+</html>
+
+<script>
+  function calcularPG() {
+    var primeiroTermo = Number(input_primeiro_termo.value);
+    var razao = Number(input_razao.value);
+    var termo = Number(input_termo.value);
+
+    var termoX = primeiroTermo * razao ** (termo - 1);
+
+    resultado.innerHTML = `
+      <span>O <b>${termo}º</b> termo nessa PG será <b>${termoX}</b></span>
+    `;
+  }
+</script>
