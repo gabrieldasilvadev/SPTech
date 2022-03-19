@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Prejú</h3>
+
+    <div>
+      <div>
+        Informe o valor do carro a vista:
+        <input type="text" id="input_valor_a_vista" />
+      </div>
+      <div>
+        Informe a taxa de juros a.m:
+        <input type="text" id="input_taxa_juros_mensal" />
+      </div>
+
+      <div>
+        Informe a quantidade de parcelas:
+        <input type="text" id="input_qtd_parcelas" />
+      </div>
+
+      <button onclick="calcularPreju()">Calcular prejú</button>
+    </div>
+
+    <div id="resultado"></div>
+  </body>
+</html>
+
+<script>
+  function calcularPreju() {
+    var valorAVista = Number(input_valor_a_vista.value);
+    var taxaJurosMensal = Number(input_taxa_juros_mensal.value) / 100 + 1.0;
+    var qtdParcelas = Number(input_qtd_parcelas.value);
+
+    var primeiraParcela = valorAVista / qtdParcelas;
+
+    var valorTotalComJuros =
+      (primeiraParcela * (taxaJurosMensal ** qtdParcelas - 1)) /
+      (taxaJurosMensal - 1);
+
+    var valorForaDeFabrica = valorAVista * 0.8;
+    var qtdCarrosSeCompradosAVista = valorTotalComJuros / valorAVista;
+
+    resultado.innerHTML = `
+      <span>Seu carro vai sair por um total de ${valorTotalComJuros.toLocaleString(
+        'pt-BR',
+        { style: 'currency', currency: 'BRL' }
+      )}. Após 1 mês, ele já vai valer só ${valorForaDeFabrica.toLocaleString(
+      'pt-BR',
+      { style: 'currency', currency: 'BRL' }
+    )}. Porque comprou financiado, vai pagar o correspondente a ${qtdCarrosSeCompradosAVista.toFixed(
+      2
+    )} carros;</span>
+    `;
+  }
+</script>
