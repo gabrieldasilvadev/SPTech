@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Calcular Raiz</h3>
+
+    <div>
+        <div>Informe um número: <input type="text" id="input_numero1"></div>
+        <div>Informe outro número: <input type="text" id="input_numero2"></div>
+
+        <button onclick="calcularRaiz()">Calcular raiz</button>
+    </div>
+
+    <div id="resultado"></div>
+</body>
+
+</html>
+
+<script>
+    function calcularRaiz() {
+        var numero1 = Number(input_numero1.value);
+        var numero2 = Number(input_numero2.value);
+
+        var raiz = numero1 ** (1 / numero2);
+
+        resultado.innerHTML = `
+        <span>A ${numero2}ª raiz de ${numero1} dá ${raiz.toFixed(2)}</span>
+    `;
+    }
+</script>
