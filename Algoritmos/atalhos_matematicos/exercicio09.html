@@ -26,7 +26,7 @@
   var valorGuardado = 0;
   function depositar() {
     var valorDepositado = Number(input_valor_depositado.value);
-    valorGuardado = valorGuardado + valorDepositado;
+    valorGuardado += valorDepositado;
     input_valor_depositado.value = '';
 
     valor_guardado.innerHTML = `
