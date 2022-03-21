@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Cofrinho</h3>
+
+    <div>
+      <span>Valor guardado no cofrinho: <span id="valor_guardado"></span></span>
+
+      <div>
+        <input type="text" id="input_valor_depositado" />
+
+        <button onclick="depositar()">Depositar</button>
+        <button onclick="removerDinheiro()">Tirar toda a grana</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  var valorGuardado = 0;
+  function depositar() {
+    var valorDepositado = Number(input_valor_depositado.value);
+    valorGuardado = valorGuardado + valorDepositado;
+    input_valor_depositado.value = '';
+
+    valor_guardado.innerHTML = `
+      <span>${valorGuardado.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+      })}</span>    
+    `;
+  }
+
+  function removerDinheiro() {
+    valorGuardado = 0;
+
+    valor_guardado.innerHTML = `
+      <span>${valorGuardado.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+      })}</span>    
+    `;
+  }
+</script>
