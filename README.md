@@ -4,16 +4,6 @@
 Aqui guardo os exercícios realizados no curso superior de Análise e Desenvolvimento de Sistemas na instituição São Paulo Tech School.
 
 
-## Autores
-
-- [@gabrieldasilvadev](https://www.github.com/gabrieldasilvadev)
-
-
-## Etiquetas
-
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
-
-
 # Olá, eu sou o Gabriel! 👋
 
 
@@ -28,6 +18,11 @@ Me chamo Gabriel, tenho 18 anos e moro São Paulo, São Paulo. Sou curso Análus
 
 ## 🛠 Habilidades
 Javascript, HTML, CSS, ReactJS
+
+
+## Autores
+
+- [@gabrieldasilvadev](https://www.github.com/gabrieldasilvadev)
 
 
 ## Licença
