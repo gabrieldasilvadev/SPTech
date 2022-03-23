@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Calorias diárias</h3>
+
+    <div>
+      <p>Porções de pão francês: <u id="qtd_pao_frances"></u></p>
+      <p>Porções de carne boniva: <u id="qtd_carne_bovina"></u></p>
+      <p>Porções de carne de soja: <u id="qtd_carne_soja"></u></p>
+      <p>Porções de arroz com feijão: <u id="qtd_arroz_feijao"></u></p>
+      <b>Total de calorias: <u id="qtd_total">0</u></b>
+    </div>
+
+    <div>
+      <button onclick="comerPaoFrances()">Comer um pão francês</button>
+      <button onclick="comerPorcaoCarneBovina()">
+        Comer porção de carne boniva
+      </button>
+      <button onclick="comerPorcaoCarneSoja()">
+        Comer porção de carne de soja
+      </button>
+      <button onclick="comerPorcaoArrozFeijao()">
+        Comer porção de arroz com feijão
+      </button>
+      <button onclick="reiniciar()">Recomeçar</button>
+    </div>
+  </body>
+</html>
+
+<script>
+  var totalCalorias = Number(qtd_total.innerHTML);
+
+  var contador = 0;
+  function comerPaoFrances() {
+    contador += 50;
+    totalCalorias += 50;
+    qtd_total.innerHTML = `${totalCalorias}`;
+
+    qtd_pao_frances.innerHTML = `${contador}`;
+  }
+  function comerPorcaoCarneBovina() {
+    contador += 100;
+    totalCalorias += 100;
+    qtd_total.innerHTML = `${totalCalorias}`;
+
+    qtd_carne_bovina.innerHTML = `${contador}`;
+  }
+  function comerPorcaoCarneSoja() {
+    contador += 30;
+    totalCalorias += 30;
+    qtd_total.innerHTML = `${totalCalorias}`;
+
+    qtd_carne_soja.innerHTML = `${contador}`;
+  }
+  function comerPorcaoArrozFeijao() {
+    contador += 120;
+    totalCalorias += 120;
+    qtd_total.innerHTML = `${totalCalorias}`;
+
+    qtd_arroz_feijao.innerHTML = `${contador}`;
+  }
+
+  function reiniciar() {
+    qtd_pao_frances.innerHTML = '';
+    qtd_carne_bovina.innerHTML = '';
+    qtd_carne_soja.innerHTML = '';
+    qtd_arroz_feijao.innerHTML = '';
+    qtd_total.innerHTML = '';
+
+    contador = 0;
+    totalCalorias = 0;
+  }
+</script>
