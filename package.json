@@ -1,0 +1,19 @@
+{
+  "name": "sptech",
+  "version": "1.0.0",
+  "description": "Aqui guardo os exercícios realizados no curso superior de Análise e Desenvolvimento de Sistemas na instituição São Paulo Tech School.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrieldasilvadev/SPTech.git"
+  },
+  "author": "Gabriel da Silva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabrieldasilvadev/SPTech/issues"
+  },
+  "homepage": "https://github.com/gabrieldasilvadev/SPTech#readme"
+}
