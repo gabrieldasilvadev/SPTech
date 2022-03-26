@@ -1,0 +1,15 @@
+.div1 {
+    background-color: #ff2323;
+    width: 50px;
+    height: 50px;
+    border: 2px solid  #4fff16;
+    margin-top: 100px;
+}
+
+.div2 {
+    background-color: #0a0a0b;
+    height: 50vh;
+    width: 50%;
+    border: 10px dashed #ff2323;
+    margin: 100px 0 0 100px;
+}
