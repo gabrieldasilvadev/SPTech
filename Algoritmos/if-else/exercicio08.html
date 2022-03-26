@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href=""/>
+</head>
+<body>
+<div>
+  <div>
+    <span>Partidas jogadas pelo atacante: </span> <input type="text" id="ipt_partidas_jogadas">
+  </div>
+  <div>
+    <span>Gols marcados: </span>
+    <input type="text" id="ipt_gols_marcados">
+  </div>
+
+  <button onclick="estudarAtacante()">Estudar Atacantes</button>
+  <div id="resultado"></div>
+</div>
+</body>
+</html>
+
+<script>
+   function estudarAtacante() {
+      var partidasJogadas = Number(ipt_partidas_jogadas.value);
+      var golsMarcados = Number(ipt_gols_marcados.value);
+
+      var media = golsMarcados / partidasJogadas;
+
+      if (media >= 0.2) {
+         resultado.innerHTML = '<p>Atacante mediano</p> <img src="https://s2.glbimg.com/nD9G-QtB6FZAxodSxbZ6OB_igek=/smart/e.glbimg.com/og/ed/f/original/2022/01/28/vinijr.jpeg">'
+      } else {
+         resultado.innerHTML = '<p>Melhor mudar de posição</p> <img src="https://blogs.correiobraziliense.com.br/dribledecorpo/wp-content/uploads/sites/15/2020/10/Zaracho.jpg">'
+      }
+      if (media > 0.6) {
+         resultado.innerHTML = '<p>Atacante de futuro</p> <img src="http://cdn.espn.com.br/image/wide/622_d1a9980f-4b8c-4792-af95-5e584fa47701.jpg">'
+      }
+   }
+</script>
