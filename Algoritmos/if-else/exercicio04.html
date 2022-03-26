@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href=""/>
+</head>
+<body>
+<div>
+  <div>
+    <span>Valor da pizza:</span> <input type="text" id="ipt_valor_pizza">
+  </div>
+  <div>
+    <span>Quantidade de amigos: </span> <input type="text" id="ipt_qtd_amigos">
+  </div>
+  <div>
+    <span>Valor máximo a ser pago por amigo: </span> <input type="text" id="ipt_valor_maximo_amigo">
+  </div>
+
+  <button onclick="calcular()">Rola a pizza?</button>
+
+  <div id="resultado"></div>
+</div>
+</body>
+</html>
+
+<script>
+   function calcular() {
+      var valorPizza = Number(ipt_valor_pizza.value);
+      var qtdAmigos = Number(ipt_qtd_amigos.value);
+      var valorMaximoPorAmigo = Number(ipt_valor_maximo_amigo.value);
+
+      var valorPorAmigo = valorPizza / qtdAmigos
+
+      resultado.innerHTML = `<p>Cada amigo vai pagar ${valorPorAmigo.toLocaleString('pt-br', {
+         style: 'currency',
+         currency: 'BRL'
+      })} pela pizza </p>`
+      if (valorPorAmigo >= valorMaximoPorAmigo) {
+         resultado.innerHTML += '<p>Deu ruim! Pizza muito cara!</p>'
+      } else {
+         resultado.innerHTML += '<p>Uhu! Vamos pedir pizza!</p>'
+      }
+   }
+</script>
