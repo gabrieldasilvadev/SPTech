@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href=""/>
+</head>
+<body>
+<div>
+  <div>
+    <span>Frequência do aluno: </span> <input type="text" id="ipt_freq_aluno">
+  </div>
+
+  <button onclick="analisarFrequencia()">Analisar frequência</button>
+
+  <div id="resultado"></div>
+</div>
+</body>
+</html>
+
+<script>
+   function analisarFrequencia() {
+      var frequenciaAluno = Number(ipt_freq_aluno.value);
+
+      if (frequenciaAluno < 50) {
+         resultado.innerHTML = '<img src="https://www.sea-international.com/pt/wp-content/uploads/sites/7/2021/03/5-300x300.png" style="width: 300px">'
+      } else {
+         resultado.innerHTML = '<img src="https://appbrasil.org.br/wp-content/uploads/2020/07/estudante.png" style="width: 300px">'
+      }
+   }
+</script>
