@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href=""/>
+</head>
+<body>
+<div>
+  <div>
+    <span>Temperatura do ambiente: </span> <input type="text" id="ipt_temp_ambiente">
+  </div>
+
+  <button onclick="verificarClima()">Verificar clima</button>
+
+  <div id="resultado"></div>
+</div>
+</body>
+</html>
+
+<script>
+   function verificarClima() {
+      var temperaturaAmbiente = Number(ipt_temp_ambiente.value);
+
+      if (temperaturaAmbiente < 10) {
+         resultado.innerHTML = '<img src="https://static.clubeextra.com.br/img/uploads/1/704/19786704.png" width="300px">'
+      } else {
+         resultado.innerHTML = '<img src="https://conteudo.imguol.com.br/c/entretenimento/40/2018/09/13/pao-estragado-1536856097776_v2_300x300.jpg" width="300px">'
+      }
+   }
+</script>
