@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href=""/>
+</head>
+<body>
+<div>
+  <div>
+    <span>Tempo que deixou o arroz cozinhando: </span> <input type="text" id="ipt_tempo_arroz_cozinhando">
+  </div>
+
+  <button onclick="provarArroz()">Provar arroz</button>
+  <div id="resultado"></div>
+</div>
+</body>
+</html>
+
+<script>
+   function provarArroz() {
+      var tempoArrozCozinhando = Number(ipt_tempo_arroz_cozinhando.value);
+
+      if (tempoArrozCozinhando == 5) {
+         resultado.innerHTML = '<p>Parabéns! Arroz perfeito!</p> <img src="https://images.aws.nestle.recipes/resized/508e90cc752880608500ad1646fd510e_ARROZ-BASICO-RECEITAS-NESTLE_1200_600.jpg" width="300px">'
+      } else {
+         resultado.innerHTML = '<p>Arroz cru ou cozido demais!</p> <img src="https://escolaeducacao.com.br/wp-content/uploads/2019/03/img_o_que_fazer_se_o_arroz_queimar_12991_600.jpg">'
+      }
+   }
+</script>
