@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="" rel="stylesheet"/>
+</head>
+<body>
+<div>
+  <span>Informe o saldo da conta:</span> <input id="ipt_saldo" type="text">
+</div>
+
+<div>
+  <span>Informe o valor do débito: </span> <input id="ipt_debito" type="text">
+</div>
+
+<button onclick="analisar()">Analisar conta</button>
+
+<div id="resultado"></div>
+</body>
+</html>
+
+<script>
+   function analisar() {
+      var saldo = Number(ipt_saldo.value);
+      var debito = Number(ipt_debito.value);
+      var saldoTotal = saldo - debito;
+
+      if (saldoTotal < 0) {
+         resultado.innerHTML = `<b style="color: #e53935">O saldo atual da conta é R$${saldoTotal.toFixed(2)}</b>`
+      } else {
+         resultado.innerHTML = `<i style="color: #2434ff">O saldo atual da conta é R$${saldoTotal.toFixed(2)}</i>`
+      }
+   }
+</script>
