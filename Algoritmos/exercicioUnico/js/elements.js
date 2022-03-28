@@ -1,0 +1,15 @@
+export const votosCandidatoA = document.querySelector('.votosCandidatoA');
+export const votosCandidatoB = document.querySelector('.votosCandidatoB');
+export const votosBrancos = document.querySelector('.votosBrancos');
+export const votosNulos = document.querySelector('.votosNulos');
+export const totalVotos = document.querySelector('.totalVotos');
+export const valueVotosA = document.querySelector('.valueVotosA');
+export const valueVotosB = document.querySelector('.valueVotosB');
+export const valueVotosInvalidos = document.querySelector('.valueVotosInvalidos');
+export const form = document.querySelector('.form');
+export const barraCandidatoA = document.querySelector('.barra-candidatoA');
+export const barraCandidatoB = document.querySelector('.barra-candidatoB');
+export const barraVotosInvalidos = document.querySelector('.barra-invalidos');
+export const infoCandidatoA = document.querySelector('.info-candidatoA');
+export const infoCandidatoB = document.querySelector('.info-candidatoB');
+export const infoVotosInvalidos = document.querySelector('.info-votos-invalidos');
