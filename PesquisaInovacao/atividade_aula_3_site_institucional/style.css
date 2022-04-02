@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li,
+a,
+input,
+button {
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  font-family: monospace, sans-serif;
+}
+
+body {
+  font-family: monospace, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.active {
+  font-weight: 1000;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.header {
+  border-bottom: 2px solid #32b9cd;
+  height: 100px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.header .container .logo {
+  color: #32b9cd;
+  font-weight: 1000;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.header .container ul {
+  display: flex;
+  gap: 25px;
+}
+
+.nav a {
+  color: #e3b062;
+}
+
+.banner {
+  background-image: url('./img/bg-jelly-fish-para-home.png');
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .container .card {
+  background-color: #e5e5e5;
+  color: #e6005a;
+  width: 400px;
+  display: flex;
+  padding: 20px 0;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card .subtitle_card_register {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 20px 0;
+  color: #e6005a;
+}
+
+.card .input_card_register {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.card .input_card_register p {
+  margin-bottom: 5px;
+}
+
+.card .input_card_register input {
+  height: 30px;
+  border: 2px solid #e6005a;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+}
+
+.btn_container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 120px;
+  height: 50px;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+}
+
+.btn:hover {
+  opacity: 70%;
+}
+
+.btn_cadastrar {
+  background-color: #e6005a;
+  color: #fff;
+}
+
+.btn_entrar {
+  border: 2px solid #e6005a;
+  color: #e6005a;
+  background-color: #fff;
+}
+
+.footer {
+  background-color: #32b9cd;
+  color: #fff;
+  font-weight: 6000;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
