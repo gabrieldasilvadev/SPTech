@@ -42,7 +42,7 @@ const configTempUmidade1 = {
   data: dataTempUmidade1,
   options: {
     layout: {
-      padding: 30,
+      padding: 10,
     },
     plugins: {
       legend: {
@@ -55,7 +55,7 @@ const configTempUmidade1 = {
         display: true,
         text: 'Aula de ChartJS do Roverzão SPTech 2022',
         font: {
-          size: 24,
+          size: 14,
         },
       },
     },
@@ -89,7 +89,7 @@ const configTempUmidade2 = {
   data: dataTempUmidade2,
   options: {
     layout: {
-      padding: 20,
+      padding: 10,
     },
     plugins: {
       legend: {
@@ -102,7 +102,7 @@ const configTempUmidade2 = {
         display: true,
         text: 'Aula de ChartJS do Roverzão SPTech 2022',
         font: {
-          size: 24,
+          size: 14,
         },
       },
     },
